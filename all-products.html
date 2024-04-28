@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <title>Document</title>
+    <title>Product</title>
 </head>
 <body>
     <div class="navbar bg-base-100">
@@ -14,11 +14,12 @@
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
             </div>
             <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-              <li><a>Home</a></li>
+              <li><a href="./index.html">Home</a></li>
               <li>
-                <a>Products</a>
+                <a href="all-products.html" onclick="products()">Products</a>
               </li>
-              <li><a>Contact us</a></li>
+              <li><a href="./contuct_us.html">Contact us</a></li>
+              <li><a href="./wishlist.html" onclick="loadWishlist()">Wishlist</a></li>
             </ul>
           </div>
           <a class="btn btn-ghost text-xl" href="./index.html">Fashion Fabrics</a>
@@ -41,32 +42,34 @@
       </div>
 
     
-      <div class="w-2/4 mx-auto pt-12">
-        <div class="flex space-x-4 mb-4">
-            <label for="filter-by-size">Filter by Size:</label>
-            <select id="filter-by-size">
-                <option value="">All Sizes</option>
-                <option value="S">Small</option>
-                <option value="M">Medium</option>
-                <option value="L">Large</option>
-                <option value="XL">Extra Large</option>
-                <option value="XXL">Double Extra Large</option>
-            </select>
+
+        <div class="w-2/4 mx-auto pt-12 md:flex items-center justify-center gap-4">
+          <div class="flex space-x-4 mb-4">
+              <label for="filter-by-size">Filter by Size:</label>
+              <select id="filter-by-size">
+                  <option value="">All Sizes</option>
+                  <option value="S">Small</option>
+                  <option value="M">Medium</option>
+                  <option value="L">Large</option>
+                  <option value="XL">Extra Large</option>
+                  <option value="XXL">Double Extra Large</option>
+              </select>
+          </div>
+      
+          <div class="flex space-x-4 mb-4">
+              <label for="filter-by-color">Filter by Color:</label>
+              <select id="filter-by-color">
+                  <option value="">All Colors</option>
+                  <option value="Red">Red</option>
+                  <option value="Blue">Blue</option>
+                  <option value="Green">Green</option>
+                  <option value="Black">Black</option>
+                  <!-- Add more color options as needed -->
+              </select>
+          </div>
+          <button id="filter-btn" class="btn btn-primary">Apply Filter</button>
         </div>
-    
-        <div class="flex space-x-4 mb-4">
-            <label for="filter-by-color">Filter by Color:</label>
-            <select id="filter-by-color">
-                <option value="">All Colors</option>
-                <option value="Red">Red</option>
-                <option value="Blue">Blue</option>
-                <option value="Green">Green</option>
-                <option value="Black">Black</option>
-                <!-- Add more color options as needed -->
-            </select>
-        </div>
-        <button id="filter-btn" class="btn btn-primary">Apply Filter</button>
-    </div>
+      
     
         
     <!-- all Products -->

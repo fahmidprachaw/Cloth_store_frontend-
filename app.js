@@ -32,7 +32,7 @@ const products = () => {
 
 const displayProduct = (products) => {
     console.log(products)
-    let htmlContent = ""; // Initialize an empty string to accumulate HTML content
+    let htmlContent = ""; 
     
     products.forEach(product => {
         htmlContent += `
@@ -85,17 +85,18 @@ const showDetails = (data) => {
     let htmlContent = "";
     htmlContent = `
         
-            <div class="md:container md:mx-auto w-96">
-                <img src="${data.image}" alt="" srcset="" class="w-96">
-            </div>
-            <div class="w-full text-center">
-                <h2 class="pb-2 text-2xl">${data.name}</h2>
+        <div class="hero-content flex-col lg:flex-row">
+            <img src="${data.image}" class="max-w-sm rounded-lg shadow-2xl" />
+            <div class="py-2">
+                <h2 class="pb-2 text-3xl">${data.name}</h2>
                 <p class="pb-2">${data.description}</p>
                 <h1 class="pb-2">Size: ${data.size}</h1>
                 <h1 class="pb-2">Color: ${data.color}</h1>
                 <h1 class="pb-2">Price: ${data.price}</h1>
+                <button class="btn btn-primary" onclick="addToWishlist(${data.id})">Add Wishlist</button>
             </div>
-        
+        </div>
+            
     `;
     const parent = document.getElementById("details-card");
     parent.innerHTML = `
